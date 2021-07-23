@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Tester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="title">
+        <h2>Typing Test</h2>
+    </div>
+    <div class="container">
+        <div class="subcontainer-1">
+            <div class="timer">
+                <p id="timer-seconds">1:00</p>
+            </div>
+            <div class="restart-btn">
+                <p>Restart</p>
+            </div>
+        </div>
+        <div class="subcontainer-2">
+            <p id="text-content"></p>
+        </div>
+        <div class="subcontainer-3">
+            <input type="text" id="typing-area" placeholder="Start typing..." autofocus>
+            <div class="results-display">
+                <h1 id="netWPM"></h1>
+
+                <div class="stats">
+                    <h2 class="stat-title">Correct Keystrokes</h2>
+                    <p class="stat-value" id="ckey"></p>
+                </div>
+
+                <div class="stats">
+                    <h2 class="stat-title">Incorrect Keystrokes</h2>
+                    <p class="stat-value" id="inckey"></p>
+                </div>
+
+                <div class="stats">
+                    <h2 class="stat-title">Correct Words</h2>
+                    <p class="stat-value" id="cwords"></p>
+                </div>
+
+                <div class="stats">
+                    <h2 class="stat-title">Incorrect Words</h2>
+                    <p class="stat-value" id="incwords"></p>
+                </div>
+
+                <div class="stats">
+                    <h2 class="stat-title">Accuracy</h2>
+                    <p class="stat-value" id="acc"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="typingTest.js"></script>
+</body>
+
+</html>
