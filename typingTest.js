@@ -48,15 +48,12 @@ let timer = setInterval(() => {
     if (timerSeconds.textContent == `0:00`) {
         clearInterval(timer);
 
-        // window.open("results.html");
-        // console.log(grossWPM);
+ 
     }
 }, 1000)
 
 
 restartBtn.addEventListener('click', () => {
-    // starterSeconds = 60;
-    // timerSeconds.textContent = `1:00`
     window.location.reload();
 })
 
@@ -91,7 +88,6 @@ let correctCharacters = 0;
 userTypingArea.addEventListener("input", () => {
     const userInput = userTypingArea.value;
     const userInputArr = userInput.split('');
-    // console.log(userInputArr);
     const characterSpansArr = document.querySelectorAll('span')
 
     typedCharacters += 1;
@@ -114,9 +110,6 @@ userTypingArea.addEventListener("input", () => {
     accuracy = (correctCharacters / typedCharacters) * 100;
     let truncAccuracy = parseFloat(accuracy.toFixed(2));
     console.log(errors, starterSeconds);
-    // console.log(totalNumOfErrors, errors, correctCharacters, truncAccuracy);
-
-    // console.log(typedCharacters);
 
     if (characterSpansArr.length == userInputArr.length) {
         textIndex += 1;
@@ -133,17 +126,11 @@ userTypingArea.addEventListener("input", () => {
         let netWPM = Math.ceil(grossWPM - (totalNumOfErrors + errors));
 
         netWPMDisplay.textContent = netWPM + " WPM";
-        // grossWPMDisplay.textContent = Math.ceil(grossWPM) + " WPM";
         correctWords.textContent = Math.ceil(correctCharacters / 5);
         incorrectWords.textContent = Math.floor((totalNumOfErrors + errors) / 5);
         correctKeystrokes.textContent = correctCharacters;
         incorrectKeystrokes.textContent = totalNumOfErrors + errors;
         accuracyDisplay.textContent = truncAccuracy + "%";
-
-        console.log("Gross WPM: " + grossWPM);
-        console.log("NET WPM: " + netWPM);
-        console.log("Correct Words: " + correctCharacters / 5);
-        console.log("Incorrect Words: " + (grossWPM - (correctCharacters / 5)));
 
     }
 })
